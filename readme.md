@@ -1,4 +1,4 @@
-Service for Fetching List of Indonesian Provinces, Regencies and Sub-Districts.
+A Simple Service for Fetching List of Indonesian Provinces, Regencies and Sub-Districts.
 ===================
 
 Tools
