@@ -1,4 +1,4 @@
-Inquiry service for Indonesian Provinsi, Kabupaten and Kecamatan
+Inquiry Service for Fetch List of Indonesian Provinces, Regencies and Sub-Districts.
 ===================
 
 Tools
