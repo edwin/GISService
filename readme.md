@@ -20,7 +20,7 @@ How to Build
 
 Messaging
 --------------------
-There are 3 requests provided, getProvinsis, getKabupatens and getKecamatans. Messaging is done by using xml formats (webservice), and you could get this project's wsdl from  browser (http://<ip>/GISService/Service?wsdl) or from Service.wsdl file.
+There are 3 requests provided, getProvinsis, getKabupatens and getKecamatans. Messaging is done by using xml formats (webservice), and you could get this project's wsdl from  browser (http://localhost:8084/GISService/Service?wsdl) or from Service.wsdl file.
 
 Here is the example of getProvinsis request.
 
