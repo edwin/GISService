@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 5, 2013 1:32:07 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.edw.gis.bean.Provinsi" table="provinsi" catalog="dbgis">
+        <id name="id" type="string">
+            <column name="id" length="2" />
+            <generator class="assigned" />
+        </id>
+        <property name="nama" type="string">
+            <column name="nama" length="30" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
