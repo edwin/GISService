@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 13, 2013 9:47:00 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.edw.gis.bean.Desa" table="desa" catalog="dbgis">
+        <id name="id" type="string">
+            <column name="id" length="10" />
+            <generator class="assigned" />
+        </id>
+        <property name="idKecamatan" type="string">
+            <column name="id_kecamatan" length="7" />
+        </property>
+        <property name="nama" type="string">
+            <column name="nama" length="40" />
+        </property>
+    </class>
+</hibernate-mapping>

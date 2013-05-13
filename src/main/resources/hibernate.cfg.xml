@@ -10,5 +10,6 @@
     <mapping resource="com/edw/gis/bean/Kecamatan.hbm.xml"/>
     <mapping resource="com/edw/gis/bean/Kabupaten.hbm.xml"/>
     <mapping resource="com/edw/gis/bean/Provinsi.hbm.xml"/>
+    <mapping resource="com/edw/gis/bean/Desa.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>

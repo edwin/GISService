@@ -2,7 +2,5 @@
 <!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
 <hibernate-reverse-engineering>
   <schema-selection match-catalog="dbgis"/>
-  <table-filter match-name="kecamatan"/>
-  <table-filter match-name="provinsi"/>
-  <table-filter match-name="kabupaten"/>
+  <table-filter match-name="desa"/>  
 </hibernate-reverse-engineering>

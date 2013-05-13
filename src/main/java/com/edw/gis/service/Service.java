@@ -1,6 +1,7 @@
 
 package com.edw.gis.service;
 
+import com.edw.gis.bean.Desa;
 import com.edw.gis.bean.Kabupaten;
 import com.edw.gis.bean.Kecamatan;
 import com.edw.gis.bean.Provinsi;
@@ -61,6 +62,21 @@ public class Service {
         } catch (Exception e) {
             logger.error(e, e);
             return new ArrayList<Kecamatan>();
+        } finally {
+            session.close();
+        }
+    }
+    
+    @WebMethod(operationName = "getDesas")
+    public List<Desa> getDesas(@WebParam(name = "idKecamatan") String idKecamatan) {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        try {
+            List<Desa> desas = session.createQuery("from Desa where idKecamatan = :idKecamatan")
+                    .setString("idKecamatan", idKecamatan).list();
+            return desas;
+        } catch (Exception e) {
+            logger.error(e, e);
+            return new ArrayList<Desa>();
         } finally {
             session.close();
         }
