@@ -1,4 +1,4 @@
-A Simple Service for Fetching List of Indonesian Provinces, Regencies and Sub-Districts.
+A Simple Service for Fetching List of Indonesian Provinces, Regencies, Sub-Districts and Villages.
 ===================
 
 Tools
@@ -55,4 +55,4 @@ and here is the response
 
 Appreciations
 --------------------
-Provinsi, kabupaten and kecamatan datas are provided by kind permission from Panji09 (http://www.kaskus.co.id/thread/518298ae8227cf927f000003/sharedatabase-wilayah-indonesia) and from http://mfdonline.bps.go.id/.
+Provinces, Regencies, Sub-Districts and Villages datas are provided by kind permission from Panji09 (http://www.kaskus.co.id/thread/518298ae8227cf927f000003/sharedatabase-wilayah-indonesia) and from http://mfdonline.bps.go.id/.
