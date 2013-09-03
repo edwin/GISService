@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>GisService by edwinkun</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>GisService</h1>
+        <p>GIS Service to fetch Indonesian's Province, Regency and Sub-District list</p>
+
+        <p class="view"><a href="https://github.com/edwinkun/GISService">View the Project on GitHub <small>edwinkun/GISService</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/edwinkun/GISService/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/edwinkun/GISService/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/edwinkun/GISService">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a name="a-simple-service-for-fetching-list-of-indonesian-provinces-regencies-sub-districts-and-villages" class="anchor" href="#a-simple-service-for-fetching-list-of-indonesian-provinces-regencies-sub-districts-and-villages"><span class="octicon octicon-link"></span></a>A Simple Service for Fetching List of Indonesian Provinces, Regencies, Sub-Districts and Villages.</h1>
+
+<h2>
+<a name="tools" class="anchor" href="#tools"><span class="octicon octicon-link"></span></a>Tools</h2>
+
+<ul>
+<li>Programming Language - Java</li>
+<li>IDE - Netbeans 7.2</li>
+<li>DB - MySQL</li>
+<li>Framework - Hibernate ORM - JaxWS 2.2</li>
+<li>Build Tool - Maven</li>
+</ul><h2>
+<a name="how-to-build" class="anchor" href="#how-to-build"><span class="octicon octicon-link"></span></a>How to Build</h2>
+
+<ol>
+<li>Restore dbgis.sql into existing MySql database.</li>
+<li>Make sure you have Internet Connection</li>
+<li>Open project using Netbeans</li>
+<li>Right click on your project, and build 
+(be patience, Maven will download libraries needed automatically)</li>
+<li>Press F6 to Run your project</li>
+<li>You will find your service on this url, http://localhost:8084/GISService/Service.</li>
+</ol><h2>
+<a name="messaging" class="anchor" href="#messaging"><span class="octicon octicon-link"></span></a>Messaging</h2>
+
+<p>There are 4 requests provided, getProvinsis, getKabupatens, getKecamatans and getDesas. Messaging is done by using xml formats (webservice), and you could get this project's wsdl from  browser (http://localhost:8084/GISService/Service?wsdl) or from Service.wsdl file.</p>
+
+<p>Here is the example of getProvinsis request.</p>
+
+<div class="highlight"><pre><span class="nt">&lt;soapenv:Envelope</span> <span class="na">xmlns:soapenv=</span><span class="s">"http://schemas.xmlsoap.org/soap/envelope/"</span> <span class="na">xmlns:ser=</span><span class="s">"http://service.gis.edw.com/"</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;soapenv:Header/&gt;</span>
+   <span class="nt">&lt;soapenv:Body&gt;</span>
+      <span class="nt">&lt;ser:getProvinsis/&gt;</span>
+   <span class="nt">&lt;/soapenv:Body&gt;</span>
+<span class="nt">&lt;/soapenv:Envelope&gt;</span>
+</pre></div>
+
+<p>and here is the response</p>
+
+<div class="highlight"><pre><span class="nt">&lt;S:Envelope</span> <span class="na">xmlns:S=</span><span class="s">"http://schemas.xmlsoap.org/soap/envelope/"</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;S:Body&gt;</span>
+      <span class="nt">&lt;ns2:getProvinsisResponse</span> <span class="na">xmlns:ns2=</span><span class="s">"http://service.gis.edw.com/"</span><span class="nt">&gt;</span>
+         <span class="nt">&lt;return&gt;</span>
+            <span class="nt">&lt;id&gt;</span>11<span class="nt">&lt;/id&gt;</span>
+            <span class="nt">&lt;nama&gt;</span>Aceh<span class="nt">&lt;/nama&gt;</span>
+         <span class="nt">&lt;/return&gt;</span>     
+        .....        
+        <span class="nt">&lt;return&gt;</span>
+            <span class="nt">&lt;id&gt;</span>94<span class="nt">&lt;/id&gt;</span>
+            <span class="nt">&lt;nama&gt;</span>Papua<span class="nt">&lt;/nama&gt;</span>
+        <span class="nt">&lt;/return&gt;</span>
+      <span class="nt">&lt;/ns2:getProvinsisResponse&gt;</span>
+   <span class="nt">&lt;/S:Body&gt;</span>
+<span class="nt">&lt;/S:Envelope&gt;</span>
+</pre></div>
+
+<h2>
+<a name="appreciations" class="anchor" href="#appreciations"><span class="octicon octicon-link"></span></a>Appreciations</h2>
+
+<p>Provinces, Regencies, Sub-Districts and Villages datas are provided by kind permission from Panji09 (<a href="http://www.kaskus.co.id/thread/518298ae8227cf927f000003/sharedatabase-wilayah-indonesia">http://www.kaskus.co.id/thread/518298ae8227cf927f000003/sharedatabase-wilayah-indonesia</a>) and from <a href="http://mfdonline.bps.go.id/">http://mfdonline.bps.go.id/</a>.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/edwinkun">edwinkun</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
