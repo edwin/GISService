@@ -1,6 +1,10 @@
 A Simple Service for Fetching List of Indonesian Provinces, Regencies, Sub-Districts and Villages.
 ===================
 
+Updated (26 September 2015)
+-------------------
+Adding new Province, Regencies, Sub-Districts and Villages based on 2015 data. Now with a total of 34 Provinces, 514 Regencies, 7.042 Sub-Districts and 81.873 Villages.
+
 Tools
 -------------------
 * Programming Language - Java
